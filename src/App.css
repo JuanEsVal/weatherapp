@@ -17,9 +17,8 @@ body {
     display: block;
     position: relative;
     margin: 80px 0;
-    /* margin: 10%; */
     border-radius: 20px;  
-    width: 300px;
+    width: 350px;
     aspect-ratio: 0.6;
     border: 1px solid rgba(31, 28, 36, 0.934);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.888);
@@ -33,18 +32,18 @@ body {
     color: bisque;
 }
 .container_weather{
+    color: rgb(8, 0, 24);
     display: flex;
-    margin: 0 20px 0 20px;
+    margin: 0 14px 0 14px;
     overflow: hidden;
 }
 .container_weather_image{
     width: 50%;
 }
 .container_weather_data{
+    color:beige;
     width: 50%;
-    padding-top: 30px;
     padding-left: 0; 
-    text-align: left;
 }
 .container_temperature{
     color:chartreuse;
@@ -70,16 +69,16 @@ h3{
     font-size: 20px;
 }
 ul{
-    font-size: 16px;
+    font-size: 12px;
 }
 li{
     list-style:none
 }
 p{
-    margin: 0;
+    margin: 10px;
 }
 img{
-    width: 120px;
+    width: 170px;
 }
 footer{
     text-align: center;

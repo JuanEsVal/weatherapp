@@ -40,7 +40,8 @@ const CardWeather = ({ lat, lon}) => {
     if(isLoading){
       return <LoadingScreen />
     }else{
-      const temp_psi = Math.round(weather?.main.pressure*0.0145)
+      const pressure_psi = Math.round(weather?.main.pressure*0.0145)
+      const pressure_bar = Math.round(weather?.main.pressure*0.001)
       const visibility_km = weather?.visibility/1000
 
 
@@ -57,16 +58,23 @@ const CardWeather = ({ lat, lon}) => {
             </div>
             <div  className='container_weather'>
               <div className='container_weather_image'>
+                <h3>&#126; {weather?.weather[0].main} &#126;</h3>
                 <h3>&#34;{weather?.weather[0].description}&#34;</h3> 
                 <img src={weather && `http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="" />
               </div>
               <div className='container_weather_data'>                
                 <ul>
-                  <li><span>Wind Speed: </span>{weather?.wind.speed} m/s</li>
-                  <li><span>Clouds: </span>{weather?.clouds.all}%</li>
-                  <li><span>Humidity: </span>{weather?.main.humidity}%</li>
-                  <li><span>Presure: </span>{temp_psi} PSI</li>
-                  <li><span>Visibility: </span>{visibility_km} Km</li>
+                  <li><span>-Wind Speed-</span></li>
+                  <li>{weather?.wind.speed} m/s</li><br />
+                  <li><span>-Clouds-</span></li>
+                  <li>{weather?.clouds.all}%</li><br />
+                  <li><span>-Humidity-</span></li>
+                  <li>{weather?.main.humidity}%</li><br />
+                  <li><span>-Presure-</span></li>
+                  <li>{pressure_psi} PSI </li>
+                  <li>({pressure_bar} bar)</li><br />
+                  <li><span>-Visibility-</span></li>
+                  <li>{visibility_km} Km</li>
                 </ul>
               </div>
             </div>
