@@ -9,7 +9,6 @@ const CardWeather = ({ lat, lon}) => {
     const [isCelcius, setIsCelcius] = useState(true)
     const [isLoading, setIsLoading] = useState(true)
 
-
     useEffect(() => {        
 
         if(lat){
@@ -25,16 +24,12 @@ const CardWeather = ({ lat, lon}) => {
                 }
               setTemperature(temp)
               setIsLoading(false)
-              
             })
             .catch(err => console.log(err))
           }        
-
     }, [lat,lon])    
 
-
     console.log(weather);
-
     const handleClick = () => setIsCelcius(!isCelcius)
 
     if(isLoading){
@@ -43,7 +38,6 @@ const CardWeather = ({ lat, lon}) => {
       const pressure_psi = Math.round(weather?.main.pressure*0.0145)
       const pressure_bar = Math.round(weather?.main.pressure*0.001)
       const visibility_km = weather?.visibility/1000
-
 
       return (
         <article className='container'>
