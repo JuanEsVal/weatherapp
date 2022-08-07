@@ -1,22 +1,28 @@
-body{
+.root {
+    box-sizing: border-box;
+}  
+*,*::before,  *::after {
+    box-sizing: inherit;
+}  
+body {
     margin: 0;
+    background-image: url("./assets/background_weather.jpg");
+    background-repeat: no-repeat, no-repeat;
 }
 .container{
     color: white;
-    background-image: url("./assets/background_weather.jpg");
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     display: grid;
     justify-content: center;
     align-items: center;
 }
 .card {
+    padding: 10%;
     border: 1px solid rgba(113, 67, 206, 0.934);
     border-radius: 20px;  
     display: block;
-    width: 500px;
-    /* height: 40%; */
-    aspect-ratio: 1.1;
+    width: 400px;
+    aspect-ratio: 0.7;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.888);
     overflow: hidden;
     text-align: center;
@@ -29,6 +35,7 @@ body{
 }
 .container_weather{
     display: flex;
+    margin: 0 20px 0 20px;
     overflow: hidden;
 }
 .container_weather_image{
