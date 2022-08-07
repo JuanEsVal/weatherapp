@@ -58,6 +58,13 @@ body {
     border: 1px solid transparent;
     cursor: pointer;
 }
+.load{
+    display: block;
+    color: yellow;
+    margin-top: 300px;
+    text-align: center;
+
+}
 h1{
     font-size: 30px;
 }
@@ -66,7 +73,11 @@ h2{
     margin: 0;
 }
 h3{
-    font-size: 20px;
+    font-size: 22px;
+    margin: 10px;
+}
+h4{
+    color: rgb(244, 215, 215);
 }
 ul{
     font-size: 12px;
@@ -83,4 +94,5 @@ img{
 footer{
     text-align: center;
     font-size: 6px;
+    color: white;
 }

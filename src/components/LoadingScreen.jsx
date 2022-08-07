@@ -2,8 +2,7 @@ import React from 'react'
 
 const LoadingScreen = () => {
   return (
-    <h1>Loading...</h1>
+    <h1 className='load'>Thinking ...</h1>
   )
 }
-
 export default LoadingScreen

@@ -59,7 +59,7 @@ const CardWeather = ({ lat, lon}) => {
             <div  className='container_weather'>
               <div className='container_weather_image'>
                 <h3>&#126; {weather?.weather[0].main} &#126;</h3>
-                <h3>&#34;{weather?.weather[0].description}&#34;</h3> 
+                <h4>&#34;{weather?.weather[0].description}&#34;</h4> 
                 <img src={weather && `http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="" />
               </div>
               <div className='container_weather_data'>                
