@@ -6,7 +6,6 @@
 }  
 body {
     margin: 5px;
-    /* padding: 2px; */
     background-image: url("./assets/background_weather.jpg");
     background-repeat: no-repeat, no-repeat;
     display: grid;
@@ -82,6 +81,7 @@ body {
     margin: 0;    
 }
 .container_temperature{
+margin-top: 20px;
     color:chartreuse;
     padding-bottom: 10px;
 }

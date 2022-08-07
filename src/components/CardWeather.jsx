@@ -66,16 +66,16 @@ const CardWeather = ({ lat, lon}) => {
               </div>
 
               <div className='container_weather_data'>                
-                  <p><span>Wind Speed</span></p>
+                  <p><span>-Wind Speed-</span></p>
                   <p>{weather?.wind.speed} m/s</p><br />
-                  <p><span>Clouds</span></p>
+                  <p><span>-Clouds-</span></p>
                   <p>{weather?.clouds.all}%</p><br />
-                  <p><span>Humidity</span></p>
+                  <p><span>-Humidity-</span></p>
                   <p>{weather?.main.humidity}%</p><br />
-                  <p><span>Pressure</span></p>
+                  <p><span>-Pressure-</span></p>
                   <p>{pressure_psi} PSI </p>
-                  <p>({pressure_bar} bar)</p><br />
-                  <p ><span>Visibility</span></p>
+                  <p>({weather?.main.pressure} hPa)</p><br />
+                  <p ><span>-Visibility-</span></p>
                   <p>{visibility_km} Km</p>
               </div>
 
