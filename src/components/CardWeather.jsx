@@ -49,10 +49,8 @@ const CardWeather = ({ lat, lon}) => {
               <h2>{` ${weather?.name}, ${weather?.sys.country}`}</h2>
               <p className='latitude'> {weather?.coord.lat} <span>N</span></p>
               <p className='longitude'>{weather?.coord.lon} <span>W</span></p>
-            </div>
-            
+            </div>            
             <div  className='container_weather'>
-
               <div className='container_weather_status'>
                   <div className='container_weather_weather_description'>
                     <h3>&#34; &#32; {weather?.weather[0].description} &#32; &#34;</h3>                
@@ -64,7 +62,6 @@ const CardWeather = ({ lat, lon}) => {
                     <h3>&#34; &#32; {weather?.weather[0].main} &#32; &#34;</h3>                
                   </div>
               </div>
-
               <div className='container_weather_data'>                
                   <p><span>-Wind Speed-</span></p>
                   <p>{weather?.wind.speed} m/s</p><br />
@@ -78,9 +75,7 @@ const CardWeather = ({ lat, lon}) => {
                   <p ><span>-Visibility-</span></p>
                   <p>{visibility_km} Km</p>
               </div>
-
             </div>
-
             <div className='container_temperature'>
               <h2>{isCelcius ? temperature?.celcius : temperature?.farenheit}</h2>
               <button className='btn' onClick={handleClick}>{isCelcius ? 'Temp to °F' : 'Temp to °C'}</button>
@@ -93,6 +88,3 @@ const CardWeather = ({ lat, lon}) => {
 }
 
 export default CardWeather
-
-
-
