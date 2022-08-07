@@ -42,25 +42,40 @@ const CardWeather = ({ lat, lon}) => {
     }else{
       const temp_psi = Math.round(weather?.main.pressure*0.0145)
       const visibility_km = weather?.visibility/1000
+
+
       return (
-        <article>
-          <h1>Weather App</h1>
-          <h2>{` ${weather?.name}, ${weather?.sys.country}`}</h2>
-          <div>
-            <img src={weather && `http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="" />
-            <div>
-              <h3>&#34;{weather?.weather[0].description}&#34;</h3>        
-              <ul>
-                <li><span>Wind Speed: </span>{weather?.wind.speed} m/s</li>
-                <li><span>Clouds: </span>{weather?.clouds.all}%</li>
-                <li><span>Humidity: </span>{weather?.main.humidity}%</li>
-                <li><span>Presure: </span>{temp_psi} PSI</li>
-                <li><span>Visibility: </span>{visibility_km} Km</li>
-              </ul>
+        <article className='container'>
+          <div className='card'>
+            <div className='container_title'>
+              <h1>Weather App</h1>          
+            </div>          
+            <div className='container_location'>
+              <h2>{` ${weather?.name}, ${weather?.sys.country}`}</h2>
+              <p> {weather?.coord.lat} <span>N</span></p>
+              <p>{weather?.coord.lon} <span>W</span></p>
             </div>
-            <h2>{isCelcius ? temperature?.celcius : temperature?.farenheit}</h2>
-            <button onClick={handleClick}>{isCelcius ? 'Change to °F' : 'Change to °C'}</button>
-          </div>      
+            <div  className='container_weather'>
+              <div className='container_weather_image'>
+                <h3>&#34;{weather?.weather[0].description}&#34;</h3> 
+                <img src={weather && `http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="" />
+              </div>
+              <div className='container_weather_data'>                
+                <ul>
+                  <li><span>Wind Speed: </span>{weather?.wind.speed} m/s</li>
+                  <li><span>Clouds: </span>{weather?.clouds.all}%</li>
+                  <li><span>Humidity: </span>{weather?.main.humidity}%</li>
+                  <li><span>Presure: </span>{temp_psi} PSI</li>
+                  <li><span>Visibility: </span>{visibility_km} Km</li>
+                </ul>
+              </div>
+            </div>
+            <div className='container_temperature'>
+              <h2>{isCelcius ? temperature?.celcius : temperature?.farenheit}</h2>
+              <button className='btn' onClick={handleClick}>{isCelcius ? 'Temp to °F' : 'Temp to °C'}</button>
+            </div>  
+            <footer>By Lolo</footer>             
+          </div>  
         </article>
       )
     }
