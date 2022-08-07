@@ -5,20 +5,25 @@
     box-sizing: inherit;
 }  
 body {
-    margin: 0;
+    margin: 5px;
+    /* padding: 2px; */
     background-image: url("./assets/background_weather.jpg");
     background-repeat: no-repeat, no-repeat;
     display: grid;
     justify-content: center;
+    justify-items: center;
     height: 100vh;
     width: 100vw;
+    color: white;
 }
 .card {
     display: block;
     position: relative;
-    margin: 80px 0;
+    margin: 5px;
+    padding: 5px;
     border-radius: 20px;  
-    width: 350px;
+    width: 300px;
+    height: 85vh;
     aspect-ratio: 0.6;
     border: 1px solid rgba(31, 28, 36, 0.934);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.888);
@@ -26,24 +31,55 @@ body {
     text-align: center;
 }
 .container_title{
-   color: aqua;
+    color: skyblue;
+    height: 40px;
+    margin: 15px; 
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
 }
 .container_location{
+    border-bottom: 1px solid rgb(221, 11, 11);
     color: bisque;
 }
 .container_weather{
-    color: rgb(8, 0, 24);
     display: flex;
-    margin: 0 14px 0 14px;
+    margin-top: 10px;
     overflow: hidden;
+    border: 1px solid rgb(0, 0, 0);
+}
+.container_weather_status{
+    display: block;
+    width: 60%;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.container_weather_weather_description{
+    height: 15%;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
 }
 .container_weather_image{
-    width: 50%;
+    justify-content: center;
+    height: 70%;
+    border: 1px solid rgb(45, 237, 15);
+    width: 100%;
+}
+.container_weather_weather_main{
+    height: 15%;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    color: skyblue;
 }
 .container_weather_data{
+    border: 1px solid rgb(53, 0, 229);
+    width: 100%;  
+}
+.container_weather_data p{
+    border: 1px solid rgb(53, 0, 229);
+    width: 100%;
     color:beige;
-    width: 50%;
-    padding-left: 0; 
+    padding: 0;
+    margin: 0;    
 }
 .container_temperature{
     color:chartreuse;
@@ -52,7 +88,7 @@ body {
 .btn{
     margin: 10px;
     padding: 5px;
-    color: rgba(156, 252, 0, 0.931);
+    color: chartreuse;
     background-color: rgba(4, 9, 22, 0.423);
     border-radius: 8px;
     border: 1px solid transparent;
@@ -66,33 +102,46 @@ body {
 
 }
 h1{
-    font-size: 30px;
+    font-size: 26px;
 }
 h2{
-    font-size: 25px;
-    margin: 0;
+    font-size: 22px;
+    margin: 5px;
 }
 h3{
-    font-size: 22px;
-    margin: 10px;
-}
-h4{
+    font-size: 18px;
+    margin: 0;
     color: rgb(244, 215, 215);
 }
 ul{
+    border: 1px solid rgb(78, 156, 14);
     font-size: 12px;
 }
 li{
-    list-style:none
+    text-align: left;
+    border: 1px solid rgb(78, 156, 14);
+    padding: 0;
+    margin: 0;
+    list-style: none
 }
 p{
-    margin: 10px;
+    font-size: 12px;
+}
+.latitude{
+    border: 1px solid rgb(78, 156, 14);
+    margin: 0;
+    font-size: 16;
+} 
+.longitude{
+    border: 1px solid rgb(78, 156, 14);
+    margin: 0;
+    font-size: 16;
 }
 img{
-    width: 170px;
+    height: 170px;
 }
 footer{
     text-align: center;
     font-size: 6px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
